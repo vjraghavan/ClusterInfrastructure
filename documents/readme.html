@@ -1,0 +1,57 @@
+<html>
+<title>
+Readme
+</title>
+
+<body bgcolor = "white">
+
+<h2> Instructions to compile: </h2>
+
+<ol>
+<li> Install <b>ant</b> in your machine</li><br>
+<li> Download the jar file into your machine</li><br>
+<li> Unjar it by executing the following command : <pre>     $> jar xvf &lt;jarfilename&gt;</pre></li>
+<li> Enter into directory <b>ClusterInfrastructure</b> <pre>     $> cd ClusterInfrastructure</pre></li>
+<li> Set your JAVA_HOME and ANT_HOME environment variables</li> <br>
+<li> Execute the following command to compile the code :<pre>     $> ant </pre></li>
+</ol>
+
+
+<h2> Instructions to run Compute Space in remote machine: </h2>
+
+<ol>
+
+<li> SSH to remote machine by executing the following command : <pre>     $> ssh -X &lt;username@hostname&gt;</pre></li>
+<li> Enter your Password </li><br>
+<li> Make sure compilation step described in <b>"Instructions to Compile"</b> is completed </li><br>
+<li> Execute the following command to start the Compute Space:<pre>     $> ant runSpace</pre></li>
+
+</ol>
+
+<h2> Instructions to run n number of remote computers</h2>
+
+<ol>
+<li> SSH to remote machine by executing the following command : <pre>     $> ssh -X &lt;username@hostname&gt;</pre></li>
+<li> Enter your Password </li><br>
+<li> Make sure compilation step described in <b>"Instructions to Compile"</b> is completed </li><br>
+<li> Change the <b>hostname</b> in <b>build.xml</b> to the <b>remote machine name</b> which runs the Compute Space</li> <br>
+<li> Also Change the <b>hostnames</b> in <b>build.xml</b> to the <b>remote machine name</b> which runs the Compute Engine</li> <br>
+
+<li> Execute the following command to start n computers in remote machines :<pre>     $> ant runComputer </font></pre></li>
+</ol>
+
+<h2> Instructions to run Clients in remote machine</h2>
+
+<ol>
+<li> SSH to remote machine by executing the following command : <pre>     $> ssh -X &lt;username@hostname&gt;</pre></li>
+<li> Enter your Password </li><br>
+<li> Make sure compilation step described in <b>"Instructions to Compile"</b> is completed </li><br>
+<li> Change the <b>hostname</b> in <b>build.xml</b> to the <b>remote machine name</b> which runs the Compute Space</li> <br>
+<li> Execute the following command to start a client to execute Travelling Salesman Problem and display results :<pre>     $> ant runEuclideanTspClient </font></pre></li>
+<li> Execute the following command to start a client to execute MandelbrotSet Problem and display results :<pre>     $> ant runMandelbrotSetClient </font></pre></li>
+<li> Execute the following command to start a client to execute Fibonacci Problem and display results :<pre>     $> ant runFibonacciClient </font></pre></li>
+ 
+</ol>
+
+</body>
+</html>
